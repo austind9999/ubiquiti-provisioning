@@ -9,7 +9,8 @@ cp nanostation.cfg running.cfg
 # towerSSID user input field
 read -p "Enter Tower SSID: " towerSSID
 
-# Replace line 194 in temp running.cfg file with towerSSID
+# Replace lines 191 and 194 in temp running.cfg file with towerSSID
+sed -i "181s/.*/wpasupplicant.profile.1.network.1.ssid=$towerSSID/" running.cfg
 sed -i "194s/.*/wireless.1.ssid=$towerSSID/" running.cfg
 
 FIRMWARE=WA.v8.7.8.46705.220201.1819.bin
