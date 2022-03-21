@@ -76,4 +76,4 @@ STEP=3
 echo "[Step $STEP of $STEPS]    Waiting for unit to complete accepting new config."
 waitForDevice
 echo ""
-echo "PROVISIONING IS COMPLETE FOR TOWER SSID: $towerSSID"
+echo "PROVISIONING IS COMPLETE FOR UNIT WITH TOWER SSID: $towerSSID"
