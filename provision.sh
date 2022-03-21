@@ -3,6 +3,14 @@
 rm /tmp/ident 2>&1 > /dev/null
 touch /tmp/ident
 chmod 700 /tmp/ident
+# Create temp config file to input SSID
+cp nanostation.cfg running.cfg
+
+# towerSSID user input field
+read -p "Enter Tower SSID: " towerSSID
+
+# Replace line 194 in temp running.cfg file with towerSSID
+sed -i "194s/.*/wireless.1.ssid=$towerSSID/" running.cfg
 
 FIRMWARE=WA.v8.7.8.46705.220201.1819.bin
 REMOTEIP=192.168.1.20
@@ -68,4 +76,4 @@ STEP=3
 echo "[Step $STEP of $STEPS]    Waiting for unit to complete accepting new config."
 waitForDevice
 echo ""
-echo "PROVISIONING IS COMPLETE"
+echo "PROVISIONING IS COMPLETE FOR TOWER SSID: $towerSSID"
