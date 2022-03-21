@@ -32,7 +32,7 @@ function waitForDevice {
 	while [ $ONLINE -lt 1 ]
 	do
 		echo "[Step $STEP of $STEPS]    Unit is still offline. Waiting for it to come up."
-		ONLINE=`ping -c1 -w2 $REMOTEIP 2>&1 | grep -c "1 packet received"`
+		ONLINE=`ping -c1 -w2 $REMOTEIP 2>&1 | grep -c "1 received"`
 		sleep 1
 	done
 }
