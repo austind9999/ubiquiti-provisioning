@@ -80,7 +80,7 @@ STEP=3
 
 # now wait for that "soft" restart to complete
 echo "[Step $STEP of $STEPS]    Waiting for unit to complete accepting new config."
-waitForDevice
-echo ""
+# waitForDevice
+# echo ""
 rm running.cfg
 echo "PROVISIONING IS COMPLETE FOR UNIT WITH TOWER SSID: $towerSSID"
