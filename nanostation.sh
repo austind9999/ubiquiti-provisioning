@@ -9,8 +9,14 @@ cp nanostation.cfg running.cfg
 # towerSSID user input field
 read -p "Enter Tower SSID: " towerSSID
 
+# deviceName user input field
+read -p "Enter Device Name (LNAME-Cust#-CPE): " deviceName
+
 # Replace SSID field text of towerSSID in temp running.cfg file with towerSSID variable text
 sed -i "s/towerSSID/$towerSSID/" running.cfg
+
+# Replace deviceName text of deviceName in temp running.cfg file with deviceName variable text
+sed -i "s/deviceName/$deviceName/" running.cfg
 
 FIRMWARE=WA.v8.7.8.46705.220201.1819.bin
 REMOTEIP=192.168.1.20
