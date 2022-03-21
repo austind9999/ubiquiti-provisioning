@@ -2,7 +2,7 @@
 This script provides automatic flashing/provisioning capability for Ubiquiti products.
 
 ## Overview
-This is a bash script that can be executed directly. Testing was done on Ubuntu 20.04, but it should be compatible with most linux distributions.
+This is a bash script that can be executed directly. Testing was done on Ubuntu 20.04, but it should be compatible with most linux distributions. Script will require a preconfigured file in the same directory named "nanostation.cfg". This file is copied and the SSID is modified with user input when this script is run.
 
 This script expects the following conditions to be met:
 1. The NanoStation AC should have a factory-default IP address of 192.168.1.20.
@@ -13,7 +13,7 @@ Requires: jq, sshpass, curl.
 
 ## Example usage
 ```bash
-$ bash provision.sh
+$ bash nanostation.sh
 ```
 
 ## Works with these products
